@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE = edge" /> 
+  <!--        <meta http-equiv="X-Frame-Options" content="deny">--> 
+  <meta name="viewport" content="width = device-width, initial-scale = 1" /> 
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" /> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css" /> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css" /> 
+  <link href="css/app.css" rel="stylesheet" type="text/css" /> 
+  <!--        <link href="css/bootstrap-combobox.css" rel="stylesheet" type="text/css"/>--> 
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" /> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+  <!--        <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>--> 
+  <script src="js/jquery.form.js" type="text/javascript"></script> 
+  <script src="js/jquery.cookie.js" type="text/javascript"></script> 
+  <script src="js/opskins.shop.js" type="text/javascript"></script> 
+  <script src="js/Chart.js/Chart.js" type="text/javascript"></script> 
+  <script src="js/jquery.marquee.js" type="text/javascript"></script> 
+  <script src="js/mousetrap.min.js" type="text/javascript"></script> 
+  <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-57760314-1', 'auto');
+            ga('send', 'pageview');
+
+        </script> 
+  <style>
+            .os-grad{
+                background: rgb(51,122,183);
+                background: -moz-radial-gradient(center, ellipse cover,  rgba(51,122,183,1) 0%, rgba(213,98,44,1) 67%);
+                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(51,122,183,1)), color-stop(67%,rgba(213,98,44,1)));
+                background: -webkit-radial-gradient(center, ellipse cover,  rgba(51,122,183,1) 0%,rgba(213,98,44,1) 67%);
+                background: -o-radial-gradient(center, ellipse cover,  rgba(51,122,183,1) 0%,rgba(213,98,44,1) 67%);
+                background: -ms-radial-gradient(center, ellipse cover,  rgba(51,122,183,1) 0%,rgba(213,98,44,1) 67%);
+                background: radial-gradient(ellipse at center,  rgba(51,122,183,1) 0%,rgba(213,98,44,1) 67%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#337ab7', endColorstr='#d5622c',GradientType=1 );
+
+            }
+        </style> 
+  <title>OPSkins | A Secure Marketplace to Buy Steam CS:GO Skins and Sell for Real Money</title> 
+  <meta name="description" content="OPSkins enables Counter Strike: Global Offensive players to safely and securely buy Steam CSGO skins and sell skins for cash. Make easy money buying and selling CS:GO skins." /> 
+ </head> 
+ <body> 
+  <!--        <div id="fb-root"></div>
+                <script>
+                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id))
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>--> 
+  <div class="content-fluid nav-push"> 
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+    <div class="container-fluid"> 
+     <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#top-nav-bar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <div class="navbar-brand">
+       <div class="user-info">
+        <a href="https://steamcommunity.com/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.mode=checkid_setup&amp;openid.return_to=http%3A%2F%2Fopskins.com%2Findex.php&amp;openid.realm=http%3A%2F%2Fopskins.com&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select" class="navbar-bran"><img src="https://opskins.com//images/steam_sign_in_sm.png" /></a>
+       </div>
+      </div> 
+     </div> 
+     <div class="collapse navbar-collapse" id="top-nav-bar"> 
+      <div class="logo dt-only">
+       <a href="?loc=home"><img src="images/logo.png" /></a>
+      </div> 
+      <ul class="nav navbar-nav"> 
+       <li class="menu"><a href="?loc=pros">CS:GO Icons</a></li>
+       <li class="menu"><a href="?loc=featured">Featured</a></li>
+       <li class="menu"><a href="?loc=shop_browse">Browse</a></li>
+       <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a> 
+        <div class="dropdown-menu" style="padding:17px;"> 
+         <form method="GET" id="search_item_nav" action="index.php"> 
+          <input type="text" class="form-control dd_search" required="" placeholder="Name or id" name="search_item" style="border-top-right-radius: 3px;border-top-left-radius: 3px;" /> 
+          <input type="number" class="form-control dd_search" placeholder="Min" name="min" /> 
+          <input type="number" class="form-control dd_search" placeholder="Max" name="max" /> 
+          <select name="grade" class="dd_search" id="grade"> <option>Grade</option> <option value="cg">Consumer grade</option> <option value="ig">Industrial grade</option> <option value="ms">Mil-Spec</option> <option value="r">Restricted</option> <option value="cl">Classified</option> <option value="co">Covert</option> <option value="er">Exceedingly Rare</option> </select> 
+          <select name="type" class="combobox form-control dd_search" id="type"> <option>Type</option> <option value="k">Knife</option> <option value="p">Pistol</option> <option value="r">Rifle</option> <option value="sg">Shotgun</option> <option value="smg">SMG</option> <option value="mg">Machinegun</option> <option value="c">Container</option> <option value="key">Key</option> <option value="st">Sticker</option> </select> 
+          <select name="sort" class="combobox form-control dd_search" id="sort"> <option value="f">Sorting</option> <option value="f">Featured</option> <option value="hl">High -&gt; Low</option> <option value="lh">Low -&gt; High</option> <option value="n">Newest -&gt; Oldest</option> <option value="o">Oldest -&gt; Newest</option> </select> 
+          <div class="input-group"> 
+           <span class="input-group-addon combo-addon"> <input type="checkbox" name="StatTrak" id="StatTrak" value="1" /> </span> 
+           <input type="text" disabled="" value="StatTrak" class="form-control dd_search" style="cursor:context-menu;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;" /> 
+          </div> 
+          <div class="divider"></div> 
+          <input type="hidden" name="loc" value="shop_search" /> 
+          <button type="submit" class="btn btn-orange" form="search_item_nav">Search</button> 
+         </form>
+        </div>  </li>
+       <li class="menu"><a href="?loc=shop_help">Help</a></li>
+       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Community<span class="caret"></span></a>
+        <ul class="dropdown-menu left" role="menu">
+         <li class="sub-menu"><a href="?loc=community-feed">Community</a></li>
+         <li class="sub-menu"><a href="?loc=wall_of_shame">Scammer List</a></li>
+         <li class="sub-menu"><a href="?loc=sale_history">Recent Sales</a></li>
+         <li class="sub-menu"><a href="https://forums.alliedmods.net/showthread.php?t=259153" target="_BLANK">Sourcemod Plugin</a></li>
+         <li class="sub-menu"><a href="http://www.reddit.com/r/opskins/" target="_BLANK">Feedback</a></li>
+         <li class="sub-menu"><a href="http://billing.opskins.com/supporttickets.php" target="_BLANK">Support</a></li>
+         <li class="sub-menu"><a href="http://steamcommunity.com/groups/opskins" target="_BLANK">Steam</a></li>
+         <li class="sub-menu"><a href="http://facebook.com/opskins" target="_BLANK">Facebook</a></li>
+         <li class="sub-menu"><a href="https://twitter.com/opskinsgo" target="_BLANK">Twitter</a></li>
+        </ul></li>
+       <li class="menu"><a href="?loc=partners">Partners</a></li> 
+       <li class="divider"></li> 
+      </ul> 
+     </div>
+     <!-- /.navbar-collapse --> 
+    </div>
+   </nav> 
+   <div id="alert-box-container"> 
+    <center>
+     <div id="alert-box">
+      <div class="alert alert-success"></div>
+     </div>
+    </center> 
+    <div id="dismiss">
+     <p>Click to dismiss.</p>
+    </div> 
+   </div> 
+   <input type="hidden" id="bumpPrice" value="50" /> 
+   <div class="row"> 
+    <div class="col-md-12 pull-left weapon-nav"> 
+     <ul class="nav nav-pills pull-left"> 
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Pistols<b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=CZ75-Auto&amp;type=p"><img src="https://opskins.com/images/weapons/CZ75-Auto.png" alt="CZ75-Auto" />CZ75-Auto</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Desert+Eagle&amp;type=p"><img src="https://opskins.com/images/weapons/Desert%20Eagle.png" alt="Desert Eagle" />Desert Eagle</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Dual+Berettas&amp;type=p"><img src="https://opskins.com/images/weapons/Dual%20Berettas.png" alt="Dual Berettas" />Dual Berettas</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Five-SeveN&amp;type=p"><img src="https://opskins.com/images/weapons/Five-SeveN.png" alt="Five-SeveN" />Five-SeveN</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Glock-18&amp;type=p"><img src="https://opskins.com/images/weapons/Glock-18.png" alt="Glock-18" />Glock-18</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=P2000&amp;type=p"><img src="https://opskins.com/images/weapons/P2000.png" alt="P2000" />P2000</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=P250&amp;type=p"><img src="https://opskins.com/images/weapons/P250.png" alt="P250" />P250</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Tec-9&amp;type=p"><img src="https://opskins.com/images/weapons/Tec-9.png" alt="Tec-9" />Tec-9</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=USP-S&amp;type=p"><img src="https://opskins.com/images/weapons/USP-S.png" alt="USP-S" />USP-S</a></li> 
+       </ul> </li> 
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Rifles<b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=AK-47&amp;type=r"><img src="https://opskins.com/images/weapons/AK-47.png" alt="AK-47" />AK-47</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=AUG&amp;type=r"><img src="https://opskins.com/images/weapons/AUG.png" alt="AUG" />AUG</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=AWP&amp;type=r"><img src="https://opskins.com/images/weapons/AWP.png" alt="AWP" />AWP</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=FAMAS&amp;type=r"><img src="https://opskins.com/images/weapons/FAMAS.png" alt="FAMAS" />FAMAS</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=G3SG1&amp;type=r"><img src="https://opskins.com/images/weapons/G3SG1.png" alt="G3SG1" />G3SG1</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Galil+AR&amp;type=r"><img src="https://opskins.com/images/weapons/Galil%20AR.png" alt="Galil AR" />Galil AR</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=M4A1-S&amp;type=r"><img src="https://opskins.com/images/weapons/M4A1-S.png" alt="M4A1-S" />M4A1-S</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=M4A4&amp;type=r"><img src="https://opskins.com/images/weapons/M4A4.png" alt="M4A4" />M4A4</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=SCAR-20&amp;type=r"><img src="https://opskins.com/images/weapons/SCAR-20.png" alt="SCAR-20" />SCAR-20</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=SG+553&amp;type=r"><img src="https://opskins.com/images/weapons/SG%20553.png" alt="SG 553" />SG 553</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=SSG+08&amp;type=r"><img src="https://opskins.com/images/weapons/SSG%2008.png" alt="SSG 08" />SSG 08</a></li> 
+       </ul> </li> 
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">SMGs<b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=MAC-10&amp;type=smg"><img src="https://opskins.com/images/weapons/MAC-10.png" alt="MAC-10" />MAC-10</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=MP7&amp;type=smg"><img src="https://opskins.com/images/weapons/MP7.png" alt="MP7" />MP7</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=MP9&amp;type=smg"><img src="https://opskins.com/images/weapons/MP9.png" alt="MP9" />MP9</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=PP-Bizon&amp;type=smg"><img src="https://opskins.com/images/weapons/PP-Bizon.png" alt="PP-Bizon" />PP-Bizon</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=P90&amp;type=smg"><img src="https://opskins.com/images/weapons/P90.png" alt="P90" />P90</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=UMP-45&amp;type=smg"><img src="https://opskins.com/images/weapons/UMP-45.png" alt="UMP-45" />UMP-45</a></li> 
+       </ul> </li> 
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Heavy<b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=MAG-7&amp;type=sg"><img src="https://opskins.com/images/weapons/MAG-7.png" alt="MAG-7" />MAG-7</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Nova&amp;type=sg"><img src="https://opskins.com/images/weapons/Nova.png" alt="Nova" />Nova</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Sawed-Off&amp;type=sg"><img src="https://opskins.com/images/weapons/Sawed-Off.png" alt="Sawed-Off" />Sawed-Off</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=XM1014&amp;type=sg"><img src="https://opskins.com/images/weapons/XM1014.png" alt="XM1014" />XM1014</a></li> 
+        <li class="divider"></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=M249&amp;type=mg"><img src="https://opskins.com/images/weapons/M249.png" alt="M249" />M249</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Negev&amp;type=mg"><img src="https://opskins.com/images/weapons/Negev.png" alt="Negev" />Negev</a></li> 
+       </ul> </li> 
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Knives<b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Bayonet&amp;type=k"><img src="https://opskins.com/images/weapons/bayonet.png" alt="Bayonet" />Bayonet</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Butterfly+Knife&amp;type=k"><img src="https://opskins.com/images/weapons/butterflyknife.png" alt="Butterfly Knife" />Butterfly Knife</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Flip+Knife&amp;type=k"><img src="https://opskins.com/images/weapons/flipknife.png" alt="Flip Knife" />Flip Knife</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Gut+Knife&amp;type=k"><img src="https://opskins.com/images/weapons/gutknife.png" alt="Gut Knife" />Gut Knife</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Huntsman+Knife&amp;type=k"><img src="https://opskins.com/images/weapons/huntsmanknife.png" alt="Huntsman" />Huntsman Knife</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Karambit&amp;type=k"><img src="https://opskins.com/images/weapons/karambit.png" alt="Karambit" />Karambit</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=M9+Bayonet&amp;type=k"><img src="https://opskins.com/images/weapons/m9bayonet.png" alt="M9 Bayonet" />M9 Bayonet</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=falchion&amp;type=k"><img src="https://opskins.com/images/weapons/falchion_knife.png" alt="Falchion Knife" />Falchion Knife</a></li> 
+       </ul> </li> 
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Cases<b class="caret"></b></a> 
+       <ul class="dropdown-menu scrollable-menu"> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=CS:GO+Weapon+Case&amp;type=c"><img src="https://opskins.com/images/containers/c1.png" alt="CS:GO Weapon Case" />CS:GO Weapon Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=CS:GO+Weapon+Case+2&amp;type=c"><img src="https://opskins.com/images/containers/c4.png" alt="CS:GO Weapon Case 2" />CS:GO Weapon Case 2</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=CS:GO+Weapon+Case+3&amp;type=c"><img src="https://opskins.com/images/containers/c10.png" alt="CS:GO Weapon Case 3" />CS:GO Weapon Case 3</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Chroma+Case&amp;type=c"><img src="https://opskins.com/images/containers/c38.png" alt="Chroma Case" />Chroma Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=eSports+2013+Case&amp;type=c"><img src="https://opskins.com/images/containers/c2.png" alt="eSports 2013 Case" />eSports 2013 Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=eSports+2013+Winter+Case&amp;type=c"><img src="https://opskins.com/images/containers/c5.png" alt="eSports 2013 Winter Case" />eSports 2013 Winter Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=eSports+2014+Summer+Case&amp;type=c"><img src="https://opskins.com/images/containers/c19.png" alt="eSports 2014 Summer Case" />eSports 2014 Summer Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Huntsman+Weapon+Case&amp;type=c"><img src="https://opskins.com/images/containers/c17.png" alt="Huntsman Weapon Case" />Huntsman Weapon Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Operation+Bravo+Case&amp;type=c"><img src="https://opskins.com/images/containers/c3.png" alt="Operation Bravo Case" />Operation Bravo Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Operation+Breakout+Weapon+Case&amp;type=c"><img src="https://opskins.com/images/containers/c18.png" alt="Operation Breakout Weapon Case" />Operation Breakout Weapon Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Operation+Phoenix+Weapon+Case&amp;type=c"><img src="https://opskins.com/images/containers/c11.png" alt="Operation Phoenix Weapon Case" />Operation Phoenix Weapon Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Operation+Vanguard+Weapon+Case&amp;type=c"><img src="https://opskins.com/images/containers/c29.png" alt="Operation Vanguard Weapon Case" />Operation Vanguard Weapon Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=Winter+Offensive+Weapon+Case&amp;type=c"><img src="https://opskins.com/images/containers/c7.png" alt="Winter Offensive Weapon Case" />Winter Offensive Weapon Case</a></li> 
+        <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=falchion+case&amp;type=c"><img src="https://opskins.com/images/containers/c50.png" alt="Falchion Case" />Falchion Case</a></li> 
+       </ul> </li> 
+      <li><a href="https://opskins.com/?loc=shop_search&amp;search_item=key&amp;type=key">Keys</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12" style="border-right:1px solid #ccc;"> 
+     <style>
+.hr-fade{
+    border: 0px none;
+    height: 1px;
+    background-image: -moz-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+    background-image: -webkit-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+    background-image: -ms-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+    background-image: -o-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+
+}
+</style> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <hr class="hr-fade" /> 
+      <h5>Users to date: 659888</h5> 
+      <h5>New Users Last 48 hours: 7707</h5> 
+     </div> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <hr class="hr-fade" /> 
+      <h5>Next date to be Cashed out: August 28th</h5> 
+     </div> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <hr class="hr-fade" /> 
+      <h5>On Sale Now: 39135</h5> 
+     </div> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <hr class="hr-fade" /> 
+      <h5>Item Transactions in the last 48 hours.</h5> 
+      <div id="canvas-holder"> 
+       <canvas id="today-item" width="200" height="200"></canvas> 
+      </div> 
+     </div> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <hr class="hr-fade" /> 
+      <h5>Total Items to Date</h5> 
+      <div id="canvas-holder"> 
+       <canvas id="total-items" width="200" height="200"></canvas> 
+      </div> 
+     </div> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <hr class="hr-fade" /> 
+      <center>
+       <div>
+        BTC = 22870
+        <span class="icon-logo"></span>
+        <p><small>Actual rates may vary</small></p>
+       </div>
+      </center> 
+      <a href="/?loc=bitcoin_faq" target="_BLANK"> <img src="images/btc.png" alt="Bitcoin accepted here" class="img-responsive" /> </a> 
+      <a href="http://csgo.steamanalyst.com/" target="_BLANK"> <h6 style="color:white">Price Suggestions by:</h6> <img src="images/partners/analyst.png" alt="Steam Analyst logo" class="img-responsive" /> </a> 
+     </div> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <hr class="hr-fade" /> 
+      <h6>All media inquiries to <a href="/cdn-cgi/l/email-protection#79141c1d10183916090a1210170a571a1614"><span class="__cf_email__" data-cfemail="90fdf5f4f9f1d0ffe0e3fbf9fee3bef3fffd">[email&nbsp;protected]</span><script cf-hash="f9e31" type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></a></h6> 
+     </div> 
+     <div class="col-lg-12 col-md-6 col-sm-4 dt-only"> 
+      <h6>Data runs on a 30 min cache</h6> 
+      <hr class="hr-fade" /> 
+     </div> 
+     <script>
+
+    var totalItems = [
+        {
+            value: 2234335,
+            color: "#F7464A",
+            highlight: "#FF5A5E",
+            label: "For sale"
+        },
+        {
+            value: 1850280,
+            color: "#46BFBD",
+            highlight: "#5AD3D1",
+            label: "Items Sold"
+        }
+    ];
+
+    var todayItems = [
+        {
+            value: 40787,
+            color: "#FDB45C",
+            highlight: "#FFC870",
+            label: "For Sale"
+        },
+        {
+            value: 39830,
+            color: "#46BFBD",
+            highlight: "#5AD3D1",
+            label: "Items Sold"
+        },
+        {
+            value: 2573,
+            color: "#949FB1",
+            highlight: "#A8B3C5",
+            label: "Returned"
+        }
+    ];
+
+    window.onload = function() {
+        var ctx = document.getElementById("today-item").getContext("2d");
+        window.myDoughnut = new Chart(ctx).Doughnut(todayItems, {responsive: true});
+
+        var ctx = document.getElementById("total-items").getContext("2d");
+        window.myDoughnut = new Chart(ctx).Doughnut(totalItems, {responsive: true});
+    };
+</script> 
+    </div> 
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> 
+     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> 
+      <h2>Easy Skins. Easy Money.</h2> 
+      <p><small>A secured marketplace allowing you to exchange your CSGO goodies for real life money.</small></p> 
+      <p>OPSkins enables its users to trade their Counter-Strike: Global Offensive goodies (skins) in a secure marketplace environment and sell them for real cash. The idea behind such a project is to put an end to all of the scams happening in the CS:GO marketplace. OPSkins has been closely following our competitors’ releases, but after months of empty promises, we have decided to fill the gap ourselves with a secure marketplace for CS:GO players to buy and sell skins. </p> 
+      <p>OPSkins keeps skins sellers safe from PayPal chargebacks because we process the skins transactions through our marketplace, instead of sellers trading directly to buyers. Sellers can then cashout their Operation Points through OPSkins and get real life money deposited into their PayPal account. Buyers purchase Operations Points (OP) from OPSkins and use their OP to buy CSGO skins. We verify buyer’s identities through a one-time security check to prevent fraudulent OP purchases. Through these security measures, we’ve created a safe platform where sellers can trade Steam Counter Strike: Global Offensive skins for real cash, and buyers are confident in their skins purchases.</p> 
+      <p>The team behind OPSkins is passionate and composed of experienced technology entrepreneurs, UI designers and developers. The OPSkins support staff is dedicated to ensuring the utmost customer satisfaction among all skins buyers and sellers. Please head over to the <a href="https://opskins.com/?loc=shop_help">help</a> section for FAQ's and to learn more about how to safely and securely buy and sell CS:GO skins through the OPSkins marketplace.</p> 
+      <!--            <div class='alert alert-success'><a href='http://steamcommunity.com/groups/opskins#announcements/detail/780595862683626092' target='_BLANK'>Promotional video making contest, 50,000 OP Prize! Click here for more details!</a></div>--> 
+      <div class="alert alert-info">
+       Steam is currently experiencing high load. Because of this, it may take longer to process your trade offer and for the item to be listed on the site. Please give up to 30 minutes for your trade to process after accepting the offer. If your item isn't listed on the site after 30 minutes, please open a support ticket.
+      </div> 
+     </div> 
+     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> 
+      <style>
+        .hr-fade{
+            border: 0px none;
+            height: 1px;
+            background-image: -moz-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+            background-image: -webkit-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+            background-image: -ms-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+            background-image: -o-linear-gradient(left center , transparent, rgba(255, 255, 255, 0.75), transparent);
+        }
+        .marquee {
+          overflow: hidden;
+          border:1px solid #ccc;
+        }
+        </style> 
+      <div class="col-lg-12 col-md-6 col-sm-4 col-xs-12"> 
+       <hr class="hr-fade" /> 
+       <span><h5>Last 30 Sales:</h5> 
+        <div class="marquee">
+         StatTrak™ AK-47 | Blue Laminate (Minimal Wear) 999
+         <span class="icon-logo"></span> ~ ★ StatTrak™ Butterfly Knife | Forest DDPAT (Field-Tested) 7250
+         <span class="icon-logo"></span> ~ StatTrak™ M4A1-S | Cyrex (Field-Tested) 5000
+         <span class="icon-logo"></span> ~ ★ Bayonet | Night (Battle-Scarred) 6000
+         <span class="icon-logo"></span> ~ Winter Offensive Case Key 220
+         <span class="icon-logo"></span> ~ M4A1-S | Cyrex (Minimal Wear) 2222
+         <span class="icon-logo"></span> ~ M4A1-S | Atomic Alloy (Minimal Wear) 640
+         <span class="icon-logo"></span> ~ AWP | Redline (Field-Tested) 598
+         <span class="icon-logo"></span> ~ ★ Huntsman Knife | Boreal Forest (Field-Tested) 4178
+         <span class="icon-logo"></span> ~ P250 | Mehndi (Minimal Wear) 356
+         <span class="icon-logo"></span> ~ M4A1-S | Bright Water (Minimal Wear) 435
+         <span class="icon-logo"></span> ~ SG 553 | Cyrex (Field-Tested) 329
+         <span class="icon-logo"></span> ~ Winter Offensive Case Key 220
+         <span class="icon-logo"></span> ~ M4A1-S | Icarus Fell (Factory New) 10167
+         <span class="icon-logo"></span> ~ ★ Huntsman Knife | Scorched (Field-Tested) 4136
+         <span class="icon-logo"></span> ~ AWP | Asiimov (Field-Tested) 3015
+         <span class="icon-logo"></span> ~ AWP | Asiimov (Field-Tested) 3015
+         <span class="icon-logo"></span> ~ Huntsman Case Key 228
+         <span class="icon-logo"></span> ~ Falchion Case Key 228
+         <span class="icon-logo"></span> ~ Operation Vanguard Case Key 224
+         <span class="icon-logo"></span> ~ Falchion Case Key 224
+         <span class="icon-logo"></span> ~ Chroma Case Key 229
+         <span class="icon-logo"></span> ~ ★ Huntsman Knife | Urban Masked (Field-Tested) 4988
+         <span class="icon-logo"></span> ~ ★ Huntsman Knife | Forest DDPAT (Field-Tested) 4045
+         <span class="icon-logo"></span> ~ ★ Huntsman Knife | Forest DDPAT (Field-Tested) 4045
+         <span class="icon-logo"></span> ~ ★ M9 Bayonet | Tiger Tooth (Factory New) 31500
+         <span class="icon-logo"></span> ~ AK-47 | Vulcan (Minimal Wear) 3579
+         <span class="icon-logo"></span> ~ StatTrak™ Glock-18 | Grinder (Factory New) 286
+         <span class="icon-logo"></span> ~ AK-47 | Elite Build (Field-Tested) 54
+         <span class="icon-logo"></span> ~ ★ Flip Knife | Ultraviolet (Field-Tested) 5620
+         <span class="icon-logo"></span> ~ 
+        </div></span> 
+      </div> 
+      <script>
+                $('.marquee').marquee({
+                //speed in milliseconds of the marquee
+                duration: 35000,
+                //gap in pixels between the tickers
+                gap: 1000,
+                //time in milliseconds before the marquee will start animating
+                delayBeforeStart: 0,
+                //'left' or 'right'
+                direction: 'left',
+                //true or false - should the marquee be duplicated to show an effect of continues flow
+                duplicated: true
+            });
+        </script>
+     </div>
+     <script type="text/javascript">
+    document.title = "OPSkins.com Marketplace | Featured Counter-Strike: Global Offensive Skins and Items";
+</script> 
+     <script src="js/opskins.scroll.js" type="text/javascript"></script> 
+     <input type="hidden" id="file" value="featured_scroll" /> 
+     <script>load_page();</script> 
+     <div class="row" id="scroll"> 
+     </div> 
+     <center> 
+      <img id="loading" src="images/ajax-loader-bar.gif" alt="" /> 
+     </center> 
+    </div> 
+   </div> 
+   <div class="footer"> 
+    <p class="text-muted">Powered by Steam, a registered trademark of Valve Corporation. <a href="http://opskins.com">OPSkins.com</a> - CS:GO Marketplace | <a href="http://opskins.com/tos.html" target="_BLANK">Terms &amp; Conditions.</a></p> 
+   </div> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>  
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> 
+   <!--                            <script src="js/bootstrap-combobox.js" type="text/javascript"></script>--> 
+   <script>
+            //sendAlert("<div class='alert alert-success'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper lectus nunc, in consectetur dui faucibus porttitor. Donec ornare, mauris sit amet venenatis luctus, risus nisi aliquet purus, eu pharetra.</div> ");
+            $('#alert-box').click(function () {
+                $(this).hide();
+                $('#alert-box-container').hide();
+            });
+            $('#alert-box-container').click(function () {
+                $(this).hide();
+                $('#alert-box').hide();
+            });
+            $('#tModal').modal({backdrop: 'static',
+                show: true
+            });
+            maxmind_user_id = "97729";
+            (function () {
+                var loadDeviceJs = function () {
+                    var element = document.createElement('script');
+                    element.src = ('https:' == document.location.protocol ? 'https:' : 'http:')
+                            + '//device.maxmind.com/js/device.js';
+                    document.body.appendChild(element);
+                };
+                if (window.addEventListener) {
+                    window.addEventListener('load', loadDeviceJs, false);
+                } else if (window.attachEvent) {
+                    window.attachEvent('onload', loadDeviceJs);
+                }
+            })();
+
+            function bump(item) {
+
+                var amount = $('#bumpPrice').val();
+                var saleTxt = 'Bumps cost ' + amount + ' OP (if you have some included it will use that instead) and put your item at the top of the list again.\r\nAre your sure you want to do this?';
+                var r = confirm(saleTxt);
+                if (r == true) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'ajax/shop_account.php',
+                        data: {type: 'bump', id: item},
+                        success: function (result) {
+                            sendAlert(result);
+                        }});
+                } else {
+                    return false;
+                }
+            }
+            Mousetrap.bind('i d d q d', function () {
+                sendAlert('<div class="alert alert-info">God Mode Enabled</div>');
+            });
+                            </script>  
+  </div>
+ </body>
+</html>
